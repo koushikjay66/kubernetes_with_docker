@@ -1,6 +1,4 @@
 Import the Gradle project via `build.gradle` inside your preferred IDE.  
-IntelliJ: https://www.jetbrains.com/help/idea/2017.1/importing-a-gradle-project-or-a-gradle-module.html  
-Eclipse: http://www.vogella.com/tutorials/EclipseGradle/article.html
 
 The `de.uniba.dsg.SpotifyApi` class is the main entry point for using the Spotify Api wrapper functionality provided by `se.michaelthelin.spotify:spotify-web-api-java`. 
 To be able to authenticate your requests, set your Spotify API credentials in `src/main/resources/config.properties`.

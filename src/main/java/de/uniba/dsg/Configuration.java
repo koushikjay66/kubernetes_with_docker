@@ -9,7 +9,7 @@ public class Configuration {
     private static final Logger LOGGER = Logger.getLogger(Configuration.class.getName());
 
     public static Properties loadProperties() {
-        try (InputStream stream = SpotifyApi.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream stream = CustomSpotifyApi.class.getClassLoader().getResourceAsStream("config.properties")) {
             Properties properties = new Properties();
             properties.load(stream);
             return properties;
