@@ -18,8 +18,8 @@ dependencies {
 	compile 'org.glassfish.jersey.inject:jersey-hk2:2.28'
     compile 'org.glassfish.jersey.core:jersey-client:2.28'
     
-    compile 'javax.xml.ws:jaxws-api:2.3.1'
-
+    // since java9, jax-ws is no longer shipped with the JDKs
+	compile group: 'com.sun.xml.ws', name: 'rt', version: '2.3.2'
 
     compile 'se.michaelthelin.spotify:spotify-web-api-java:2.1.2'
 

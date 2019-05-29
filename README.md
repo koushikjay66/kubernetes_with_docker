@@ -1,6 +1,6 @@
 Import the Gradle project via `build.gradle` inside your preferred IDE.  
 
-The `de.uniba.dsg.SpotifyApi` class is the main entry point for using the Spotify Api wrapper functionality provided by `se.michaelthelin.spotify:spotify-web-api-java`. 
+The `de.uniba.dsg.CustomSpotifyApi` class is the main entry point for using the Spotify Api wrapper functionality provided by `se.michaelthelin.spotify:spotify-web-api-java`. 
 To be able to authenticate your requests, set your Spotify API credentials in `src/main/resources/config.properties`.
 
 All service interfaces are located inside `de.uniba.dsg.interfaces`.
