@@ -5,6 +5,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+
+  console.log("Query is "+ req.query.bulala);
   var title = (req.query.title === undefined) ? 'Nara' : req.query.title;
   var artist = (req.query.artist === undefined) ? 'alt-J' : req.query.artist;
 
@@ -14,7 +16,7 @@ router.get('/', function(req, res, next) {
         console.log('Artist is ' + artist);
 
         rest.get('http://search:8080/api/artists/search?artist=' + artist).on('complete', function(data) {
-          console.log('Artist ID is ' + data["id"]);
+          console.log('Artist ID is ' + data);
           rest.get('http://charts:8080/api/charts/' + data["id"]).on('complete', function(data) {
             console.log('Top songs are ' + JSON.stringify(data));
             callback(null, data);
