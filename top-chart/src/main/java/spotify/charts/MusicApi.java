@@ -9,7 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 
-import spotify.charts.resources.ChartsService;
+import spotify.charts.resources.ChartsResource;
 
 @ApplicationPath("/")
 @Consumes(MediaType.APPLICATION_JSON) // This makes API always consume JSON
@@ -18,7 +18,7 @@ public class MusicApi extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new HashSet<>();
-        resources.add(ChartsService.class);
+        resources.add(ChartsResource.class);
         return resources;
     }
 }

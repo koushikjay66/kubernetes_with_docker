@@ -9,7 +9,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 
-import spotify.search.resources.SearchService;
+import spotify.search.resources.ArtistResource;
+import spotify.search.resources.SearchResource;
 
 @ApplicationPath("/")
 @Produces(MediaType.APPLICATION_JSON) // This makes the API Produces JSON
@@ -18,7 +19,8 @@ public class MusicApi extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new HashSet<>();
-        resources.add(SearchService.class);
+        resources.add(SearchResource.class);
+        resources.add(ArtistResource.class);
         return resources;
     }
 }

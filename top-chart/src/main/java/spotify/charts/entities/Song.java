@@ -1,9 +1,9 @@
 package spotify.charts.entities;
 
 public class Song {
+	private String Id;
 	private String title;
 	private String artist;
-	private double duration;
 	
 	public String getTitle() {
 		return title;
@@ -18,11 +18,17 @@ public class Song {
 	public void setArtist(String artist) {
 		this.artist = artist;
 	}
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return Id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(String id) {
+		Id = id;
+	}
 	
-	public double getDuration() {
-		return duration;
-	}
-	public void setDuration(double duration) {
-		this.duration = duration;
-	}
 }

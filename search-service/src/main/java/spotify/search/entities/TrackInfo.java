@@ -3,7 +3,6 @@ package spotify.search.entities;
 public class TrackInfo {
 	private String trackId;
 	private String artistName;
-	private String artistsName;
 	private String songTitle;
 	/**
 	 * @return the songTitle
@@ -40,17 +39,5 @@ public class TrackInfo {
 	 */
 	public void setArtistName(String artistName) {
 		this.artistName = artistName;
-	}
-	/**
-	 * @return the artistsName
-	 */
-	public String getArtistsName() {
-		return artistsName;
-	}
-	/**
-	 * @param artistsName the artistsName to set
-	 */
-	public void setArtistsName(String artistsName) {
-		this.artistsName = artistsName;
 	}
 }
