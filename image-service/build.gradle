@@ -16,8 +16,13 @@ apply plugin: 'eclipse-wtp'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
+war {
+    enabled=true
+}
 
 project.webAppDirName = 'WebContent'
+
+
 buildscript {
     repositories {
         jcenter()
@@ -38,7 +43,6 @@ dependencies {
     compile 'org.glassfish.jersey.media:jersey-media-moxy:2.28'
 	compile 'org.glassfish.jersey.inject:jersey-hk2:2.28'
     compile 'org.glassfish.jersey.core:jersey-client:2.28'
-    // https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api
 compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0'
     
     
