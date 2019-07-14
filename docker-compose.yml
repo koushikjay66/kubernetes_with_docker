@@ -8,15 +8,15 @@ services:
   image-service:
     build: ./image-service/docker
     restart: always
-    ports: 
-      - "8080:8080"
+    #ports: 
+     # - "8080:8080"
   chart-service:
     build: ./top-chart
     restart: always
-    ports: 
-      - "6060:6060"
+    #ports: 
+     # - "6060:6060"
   search-service:
     build: ./search-service
     restart: always
-    ports: 
-      - "7070:7070"
+    #ports: 
+     # - "7070:7070"

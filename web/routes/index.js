@@ -15,9 +15,9 @@ router.get('/', function(req, res, next) {
         // get top songs
         console.log('Artist is ' + artist);
 
-        rest.get('http://search:8080/api/artists/search?artist=' + artist).on('complete', function(data) {
+        rest.get('http://search:7070/artist/search?name=' + artist).on('complete', function(data) {
           console.log('Artist ID is ' + data);
-          rest.get('http://charts:8080/api/charts/' + data["id"]).on('complete', function(data) {
+          rest.get('http://charts:6060/charts/' + data["id"]).on('complete', function(data) {
             console.log('Top songs are ' + JSON.stringify(data));
             callback(null, data);
           });
@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
           rest.get('http://search:8080/api/tracks/search?title=' + title + '&artist=' + artist).on('complete', function(data) {
             console.log('Title ID is ' + data["id"]);
 
-            rest.get('http://images:8080/api/covers/' + data["id"]).on('complete', function(data) {
+            rest.get('http://images:8080/image-service/cover/' + data["id"]).on('complete', function(data) {
               console.log('Cover image is ' + data["url"]);
               callback(null, data["url"]);
             });
