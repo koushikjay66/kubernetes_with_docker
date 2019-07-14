@@ -1,9 +1,0 @@
-version: '2'
-
-services:
-  image_service_dockerfile:
-    build:
-      context: .
-      dockerfile: image_service_dockerfile
-    ports:
-      - "8080:8080"
