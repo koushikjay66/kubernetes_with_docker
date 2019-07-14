@@ -1,12 +1,22 @@
 version: '2'
 services:
-  image-service:
-    build: ./image-service/docker
-    restart: always
-    ports: 
-      - "8080:8080"
   web:
     build: ./web
     restart: always
     ports: 
       - "8888:3000"
+  image-service:
+    build: ./image-service/docker
+    restart: always
+    ports: 
+      - "8080:8080"
+  chart-service:
+    build: ./top-chart
+    restart: always
+    ports: 
+      - "6060:6060"
+  search-service:
+    build: ./search-service
+    restart: always
+    ports: 
+      - "7070:7070"
