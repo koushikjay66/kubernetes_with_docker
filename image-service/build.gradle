@@ -18,10 +18,15 @@ targetCompatibility = '1.8'
 
 war {
     enabled=true
+    archiveName 'hello-gradle.war'
 }
 
 project.webAppDirName = 'WebContent'
 
+aaptOptions {
+
+ cruncherEnabled = false  
+}
 
 buildscript {
     repositories {
