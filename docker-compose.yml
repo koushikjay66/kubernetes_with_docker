@@ -1,8 +1,12 @@
-version: '3'
+version: '2'
 services:
-    image-service:
-        build: ./image-service/docker
-            dockerfile: image_service_dockerfile
-        restart: always
-        ports:
-            -"8080:8080"
+  image-service:
+    build: ./image-service/docker
+    restart: always
+    ports: 
+      -"8080:8080"
+  web:
+    build: ./web
+    restart: always
+    ports: 
+      -"8888:3000"
