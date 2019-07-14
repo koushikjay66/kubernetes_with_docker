@@ -16,7 +16,7 @@ public class ImageService extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add( ImageEndpoint.class );
+        h.add(ImageEndpoint.class);
         return h;
         }
 }

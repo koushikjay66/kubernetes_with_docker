@@ -29,12 +29,12 @@ import image.exceptions.ResourceNotFoundException;
 @Produces(MediaType.APPLICATION_JSON)
 @Path("cover")
 public class ImageEndpoint {
-
+	//e.g http://localhost:8080/image-service/cover/15JINEqzVMv3SvJTAXAKED
 	@GET
 	@Consumes(MediaType.APPLICATION_XML)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{songID}")
-	public AlbumArtModel  getImage(@PathParam("songID") String songID) {
+	public AlbumArtModel getImage(@PathParam("songID") String songID) {
 		
 		if(songID == null) {
 			throw new ClientRequestException(new ErrorMessage("Required Parameter is missing"));
