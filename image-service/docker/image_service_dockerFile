@@ -1,0 +1,7 @@
+FROM tomcat 
+
+MAINTAINER Kowshik Dipta Das Joy<kowshik-dipta-das.joy@stud.uni-bamberg.de>
+
+ADD ../docker/image_service_dockerFile /usr/local/tomcat/webapps/
+
+CMD ["catalina.sh", "run"]
